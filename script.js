@@ -110,5 +110,11 @@ function editStudent(index) {
     modal.style.display = 'block';
 }
 
+function deleteStudent(index) {
+    students.splice(index, 1);
+    localStorage.setItem('students', JSON.stringify(students));
+    displayStudents();
+}
+
 displayStudents();
 
