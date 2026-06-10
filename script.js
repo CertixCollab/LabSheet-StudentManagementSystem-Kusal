@@ -9,3 +9,10 @@ const closeViewBtn = document.querySelector('.close-view');
 const studentForm = document.getElementById('studentForm');
 const formTitle = document.getElementById('formTitle');
 
+addBtn.onclick = () => {
+    formTitle.textContent = 'Add New Student';
+    modal.style.display = 'block';
+    studentForm.reset();
+    editIndex = -1;
+};
+
