@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <button id="addBtn" class="btn-add">+ Add Student</button>
+        
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="formTitle">Add Student</h2>
+            <form id="studentForm">
+                <input type="text" id="studentId" placeholder="Student ID" required>
+                <input type="text" id="studentName" placeholder="Name" required>
+                <input type="number" id="studentAge" placeholder="Age" required>
+                <select id="studentCourse" required>
+                    <option value="">Select Course</option>
+                    <option value="IT">IT</option>
+                    <option value="English">English</option>
+                    <option value="SE">SE</option>
+                    <option value="Tourism">Tourism</option>
+                </select>
+                <button type="submit" class="btn-submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-view">&times;</span>
+            <h2>Student Details</h2>
+            <div id="viewContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
