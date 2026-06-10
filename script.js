@@ -19,3 +19,7 @@ addBtn.onclick = () => {
 closeBtn.onclick = () => {
     modal.style.display = 'none';
 };
+
+closeViewBtn.onclick = () => {    
+    viewModal.style.display = 'none';
+}
