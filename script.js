@@ -16,3 +16,6 @@ addBtn.onclick = () => {
     editIndex = -1;
 };
 
+closeBtn.onclick = () => {
+    modal.style.display = 'none';
+};
