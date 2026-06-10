@@ -22,4 +22,10 @@ closeBtn.onclick = () => {
 
 closeViewBtn.onclick = () => {    
     viewModal.style.display = 'none';
-}
+};
+
+window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+    if (e.target === viewModal) viewModal.style.display = 'none';
+};
+
