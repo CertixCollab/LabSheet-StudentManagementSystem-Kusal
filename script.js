@@ -86,6 +86,18 @@ function displayStudents() {
     });
 }
 
+function viewStudent(index) {
+    const student = students[index];
+    document.getElementById('viewContent').innerHTML = `
+        <p><strong>ID:</strong> ${student.id}</p>
+        <p><strong>Name:</strong> ${student.name}</p>
+        <p><strong>Age:</strong> ${student.age}</p>
+        <p><strong>Course:</strong> ${student.course}</p>
+    `;
+    viewModal.style.display = 'block';
+}
+
+
 
 displayStudents();
 
