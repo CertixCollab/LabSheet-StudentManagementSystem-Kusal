@@ -66,3 +66,26 @@ studentForm.onsubmit = (e) => {
 };
 
 
+function displayStudents() {
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    
+    students.forEach((student, index) => {
+        const row = tbody.insertRow();
+        row.innerHTML = `
+            <td>${student.id}</td>
+            <td>${student.name}</td>
+            <td>${student.age}</td>
+            <td>${student.course}</td>
+            <td>
+                <span class="action-btn" onclick="viewStudent(${index})">👁</span>
+                <span class="action-btn" onclick="editStudent(${index})">✏</span>
+                <span class="action-btn" onclick="deleteStudent(${index})">🗑</span>
+            </td>
+        `;
+    });
+}
+
+
+displayStudents();
+
