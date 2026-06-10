@@ -86,6 +86,35 @@ function displayStudents() {
     });
 }
 
+function viewStudent(index) {
+    const student = students[index];
+    document.getElementById('viewContent').innerHTML = `
+        <p><strong>ID:</strong> ${student.id}</p>
+        <p><strong>Name:</strong> ${student.name}</p>
+        <p><strong>Age:</strong> ${student.age}</p>
+        <p><strong>Course:</strong> ${student.course}</p>
+    `;
+    viewModal.style.display = 'block';
+}
+
+function editStudent(index) {
+    editIndex = index;
+    const student = students[index];
+    
+    document.getElementById('studentId').value = student.id;
+    document.getElementById('studentName').value = student.name;
+    document.getElementById('studentAge').value = student.age;
+    document.getElementById('studentCourse').value = student.course;
+    
+    formTitle.textContent = 'Update Student';
+    modal.style.display = 'block';
+}
+
+function deleteStudent(index) {
+    students.splice(index, 1);
+    localStorage.setItem('students', JSON.stringify(students));
+    displayStudents();
+}
 
 displayStudents();
 
