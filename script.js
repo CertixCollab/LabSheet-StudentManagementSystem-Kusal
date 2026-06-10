@@ -97,7 +97,18 @@ function viewStudent(index) {
     viewModal.style.display = 'block';
 }
 
-
+function editStudent(index) {
+    editIndex = index;
+    const student = students[index];
+    
+    document.getElementById('studentId').value = student.id;
+    document.getElementById('studentName').value = student.name;
+    document.getElementById('studentAge').value = student.age;
+    document.getElementById('studentCourse').value = student.course;
+    
+    formTitle.textContent = 'Update Student';
+    modal.style.display = 'block';
+}
 
 displayStudents();
 
